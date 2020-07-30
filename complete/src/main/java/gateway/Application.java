@@ -33,7 +33,7 @@ public class Application {
 				.uri(httpUri))
 			.route(p -> p.path("/quotes/*")
 	    		             .filters(f -> f.stripPrefix(1))
-	    			     .uri("http://quotes"))
+	    			     .uri("http://quotes-fharo-sandbox.apps.dc12-dev-01.cld.omnitracs.com/"))
 			.route(p -> p
 				.host("*.hystrix.com")
 				.filters(f -> f
