@@ -31,6 +31,8 @@ public class Application {
 				.path("/get")
 				.filters(f -> f.addRequestHeader("Hello", "World"))
 				.uri(httpUri))
+			.route(p -> p.path("/quote/*")
+	    			.uri("http://quotes"))
 			.route(p -> p
 				.host("*.hystrix.com")
 				.filters(f -> f
